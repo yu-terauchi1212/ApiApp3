@@ -22,6 +22,12 @@ namespace ApiApp3.Controllers
             return Ok(_context.Study.ToList());
         }
 
-
+        [HttpPost]
+        public async Task <IActionResult> Create(Study study)
+        {
+            _context.Study.Add(study);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetAll), new { id = study.Id} , study);
+        }
     }
 }

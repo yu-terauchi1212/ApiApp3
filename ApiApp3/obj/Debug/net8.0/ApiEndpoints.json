@@ -8,5 +8,21 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiApp3.Controllers.StudyController",
+    "Method": "Create",
+    "RelativePath": "ApiApp3 / Study",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "study",
+        "Type": "ApiApp3.Models.Study",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
