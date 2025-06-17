@@ -1,12 +1,30 @@
 <template>
-  <div class="form-container">
-    <h2>学習履歴入力</h2>
+  <div>
+    <h1 class="study-title">学習履歴入力</h1>
     
-    <input v-model="subject" placeholder="科目" />
-    <input v-model="categories" placeholder="カテゴリ" />
-    <input v-model="time" placeholder="学習時間" />
-    <input v-model="date" placeholder="学習日" />
-    <button @click="submit">送信</button>
+    <div class="form-container">
+      <div class="form-group">
+        <label for="subject">科目</label>
+        <input id="subject" v-model="subject" placeholder="科目名を入力してください" />
+      </div>
+      
+      <div class="form-group">
+        <label for="categories">カテゴリ</label>
+        <input id="categories" v-model="categories" placeholder="カテゴリを入力してください" />
+      </div>
+      
+      <div class="form-group">
+        <label for="time">学習時間(h)</label>
+        <input id="time" v-model="time" placeholder="学習時間を入力してください" type="number" step="0.5" />
+      </div>
+      
+      <div class="form-group">
+        <label for="date">学習日</label>
+        <input id="date" v-model="date" placeholder="YYYY-MM-DD" type="date" />
+      </div>
+      
+      <button class="submit-button" @click="submit">送信する</button>
+    </div>
   </div>
 </template>
 
@@ -41,18 +59,70 @@ const submit = async () => {
 </script>
 
 <style scoped>
+.study-title {
+  color: #1a5fb4;
+  margin-bottom: 20px;
+}
+
 .form-container {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  gap: 10px; /* 各要素の間にスペース */
+  width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #1a5fb4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin-top: 20px;
 }
 
-input,
-textarea,
-button {
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: #1a5fb4;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #1a5fb4;
+  background-color: #fff9c4;
   font-size: 1rem;
-  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: #ffee58;
+  box-shadow: 0 0 3px #ffee58;
+}
+
+.submit-button {
+  background-color: #1a5fb4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: #154a8c;
+}
+
+.submit-button:active {
+  background-color: #0e325e;
 }
 </style>

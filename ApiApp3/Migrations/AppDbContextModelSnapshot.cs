@@ -34,8 +34,8 @@ namespace ApiApp3.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Time")
-                        .HasColumnType("INTEGER");
+                    b.Property<float>("Time")
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 

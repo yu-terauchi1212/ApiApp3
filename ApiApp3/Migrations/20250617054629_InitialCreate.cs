@@ -18,7 +18,7 @@ namespace ApiApp3.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Subject = table.Column<string>(type: "TEXT", nullable: false),
                     Categories = table.Column<string>(type: "TEXT", nullable: false),
-                    Time = table.Column<int>(type: "INTEGER", nullable: false),
+                    Time = table.Column<float>(type: "REAL", nullable: false),
                     Date = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
