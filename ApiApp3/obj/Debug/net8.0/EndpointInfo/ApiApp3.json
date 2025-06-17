@@ -65,8 +65,8 @@
             "nullable": true
           },
           "time": {
-            "type": "integer",
-            "format": "int32"
+            "type": "number",
+            "format": "float"
           },
           "date": {
             "type": "string",

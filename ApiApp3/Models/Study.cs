@@ -8,7 +8,7 @@ namespace ApiApp3.Models
         public string Subject { get; set; }
 
         public string Categories { get; set; }
-        public int Time {  get; set; }
+        public float Time {  get; set; }
         public string Date {  get; set; }
 
     }

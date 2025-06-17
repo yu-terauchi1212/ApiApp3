@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiApp3.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250617023323_InitialCreate")]
+    [Migration("20250617054629_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -37,8 +37,8 @@ namespace ApiApp3.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Time")
-                        .HasColumnType("INTEGER");
+                    b.Property<float>("Time")
+                        .HasColumnType("REAL");
 
                     b.HasKey("Id");
 
