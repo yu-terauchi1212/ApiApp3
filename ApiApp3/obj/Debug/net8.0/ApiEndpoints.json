@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "ApiApp3.Controllers.StudyController",
+    "Method": "GetAll",
+    "RelativePath": "ApiApp3 / Study",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

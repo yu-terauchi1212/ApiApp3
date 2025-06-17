@@ -1,0 +1,22 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ApiApp3",
+    "version": "1.0"
+  },
+  "paths": {
+    "/ApiApp3 / Study": {
+      "get": {
+        "tags": [
+          "Study"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
