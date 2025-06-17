@@ -22,6 +22,11 @@ const router = createRouter({
       name: 'input',
       component: () => import('../views/InputView.vue'),
     },
+    {
+      path: '/database',
+      name: 'database',
+      component: () => import('../views/DatabaseView.vue'),
+    },
   ],
 })
 

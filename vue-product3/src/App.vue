@@ -14,6 +14,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/list">List</RouterLink>
         <RouterLink to="/input">Input</RouterLink>
+        <RouterLink to="/database">Database</RouterLink>
 
       </nav>
     </div>
@@ -26,6 +27,11 @@ import HelloWorld from './components/HelloWorld.vue'
 header {
   line-height: 1.5;
   max-height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  color: #1a5fb4; /* wrapperクラスのテキスト色を青色に変更 */
 }
 
 .logo {
@@ -38,6 +44,9 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: -2rem;
+
+  color: #1a5fb4;
+
 }
 
 nav a.router-link-exact-active {

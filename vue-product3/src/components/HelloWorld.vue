@@ -18,6 +18,7 @@ h1 {
   font-weight: 500;
   font-size: 2.6rem;
   position: relative;
+  color: #1a5fb4; /* 青色に変更 */
 }
 
 h3 {

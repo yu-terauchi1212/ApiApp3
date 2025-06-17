@@ -29,5 +29,17 @@ namespace ApiApp3.Controllers
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(GetAll), new { id = study.Id} , study);
         }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var study = await _context.Study.FindAsync(id);
+            if (study == null) return NotFound();
+
+            _context.Study.Remove(study);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
+
     }
 }

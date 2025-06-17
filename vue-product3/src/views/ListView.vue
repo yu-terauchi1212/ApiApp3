@@ -9,6 +9,7 @@
           <th>カテゴリ</th>
           <th>学習時間(h)</th>
           <th>日付</th>
+          <th>削除</th>
         </tr>
       </thead>
       <tbody>
@@ -19,6 +20,10 @@
           <td>{{ study.categories }}</td>
           <td>{{ study.time }}</td>
           <td>{{ study.date }}</td>
+          <td>
+            <button @click="deleteStudy(study.id)">削除</button>
+          </td>
+
         </tr>
       </tbody>
     </table>
@@ -33,14 +38,27 @@ import axios from 'axios'
 const studies = ref([])
 
 // ページ表示時にAPIから学習履歴データを取得する処理
-onMounted(async () => {
+const getData = async () => {
   try {
     const res = await axios.get('http://localhost:5240/ApiApp3 / Study')
     studies.value = res.data // 結果を表示用に代入
   } catch (error) {
     console.error("データ取得エラー:", error)
   }
-})
+}
+
+// 学習履歴を削除する処理
+const deleteStudy = async (id) => {
+  try {
+    await axios.delete(`http://localhost:5240/ApiApp3 / Study/${id}`)
+    // 削除後に再度データを取得して表示を更新
+    getData()
+  } catch (error) {
+    console.error("削除エラー:", error)
+  }
+}
+
+onMounted(getData)
 </script>
 
 <style scoped>
