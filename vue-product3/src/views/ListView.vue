@@ -4,7 +4,7 @@
     <ul>
       <!-- 受け取ったstudiesをループして1件ずつ表示 -->
       <li v-for="study in studies" :key="study.id">
-        {{ study.id }} - {{ study.subject }}
+        {{ study.id }} - {{ study.subject }} - {{ study.categories }} - {{ study.time }}h - {{ study.date }}
       </li>
     </ul>
   </div>
